@@ -1,0 +1,14 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/reset";
+@import "./base/typography";
+@import "./layout/card";
+@import "./layout/rating";
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  a {
+    color: blue;
+  }
+}
