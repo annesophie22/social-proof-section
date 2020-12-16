@@ -1,5 +1,63 @@
+/* colors */
+/* breakpoints maps */
+/* font sizes maps */
+/*  font-sizes */
+/* p */
 body {
   background: lightpink;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.page__title {
+  color: #502050;
+  font-weight: 700;
+}
+
+.page__headline {
+  color: #937b92;
+}
+
+.rating-block__text {
+  color: #502050;
+  font-weight: 700;
+}
+
+.card__header-title {
+  color: white;
+  font-weight: 700;
+}
+
+.card__header-subtitle {
+  color: #ee68a4;
+  font-weight: 400;
+}
+
+.card__desc {
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 480px) {
+  .card__desc {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .card__desc {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card__desc {
+    font-size: 50px;
+  }
 }
 
 .attribution {

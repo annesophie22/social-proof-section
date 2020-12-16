@@ -1,0 +1,35 @@
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.page {
+  &__title {
+    color: $color-primary-dark;
+    font-weight: 700;
+  }
+  &__headline {
+    color: $color-neutral-dark;
+  }
+}
+
+.rating-block__text {
+  color: $color-primary-dark;
+  font-weight: 700;
+}
+
+.card {
+  &__header-title {
+    color: $color-white;
+    font-weight: 700;
+  }
+  &__header-subtitle {
+    color: $color-primary-light;
+    font-weight: 400;
+  }
+  &__desc {
+    @include font-size($p-font-size);
+    color: $color-white;
+    font-weight: 400;
+  }
+}

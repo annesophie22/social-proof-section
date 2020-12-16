@@ -1,0 +1,26 @@
+/* breakpoints maps */
+$breakpoints: (
+  small: 480px,
+  medium: 700px,
+  large: 1024px,
+);
+
+/* font sizes maps */
+$p-font-size: (
+  null: 15px,
+  480px: 30px,
+  700px: 40px,
+  1024px: 50px,
+);
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    } @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
