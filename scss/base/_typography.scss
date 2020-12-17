@@ -7,15 +7,19 @@ body {
   &__title {
     color: $color-primary-dark;
     font-weight: 700;
+    @include font-size($h1-font-size);
   }
   &__headline {
     color: $color-neutral-dark;
+    line-height: 1.6;
+    @include font-size($headline-font-size);
   }
 }
 
 .rating-block__text {
   color: $color-primary-dark;
   font-weight: 700;
+  @include font-size($p-font-size);
 }
 
 .card {
@@ -28,8 +32,12 @@ body {
     font-weight: 400;
   }
   &__desc {
-    @include font-size($p-font-size);
     color: $color-white;
     font-weight: 400;
+  }
+  &__header-title,
+  &__header-subtitle,
+  &__desc {
+    @include font-size($p-font-size);
   }
 }

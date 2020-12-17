@@ -3,6 +3,7 @@
 @import "./abstracts/functions";
 @import "./base/reset";
 @import "./base/typography";
+@import "./layout/header";
 @import "./layout/card";
 @import "./layout/rating";
 
@@ -12,4 +13,41 @@
   a {
     color: blue;
   }
+}
+
+body {
+  background: $color-white;
+}
+
+.body-wrapper {
+  padding: 5.2em 1.8em;
+  /* @include mq-mobile {
+    padding: 5.2em 1.8em;
+  }
+  @include mq-tablet {
+    padding: 6em;
+  }
+  @include mq-desktop {
+    padding: 15em;
+  } */
+}
+
+.pattern {
+  &__desktop,
+  &__mobile {
+    position: absolute;
+    display: none;
+  }
+}
+
+#pattern-top-mobile,
+#pattern-top-desktop {
+  top: 0;
+  left: 0;
+}
+
+#pattern-bottom-mobile,
+#pattern-bottom-desktop {
+  bottom: 0;
+  right: 0;
 }

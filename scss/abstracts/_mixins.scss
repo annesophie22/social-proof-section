@@ -6,21 +6,63 @@ $breakpoints: (
 );
 
 /* font sizes maps */
-$p-font-size: (
-  null: 15px,
+$h1-font-size: (
+  null: 1.88rem,
   480px: 30px,
   700px: 40px,
   1024px: 50px,
 );
 
-@mixin font-size($fs-map) {
+$headline-font-size: (
+  null: 0.88rem,
+  480px: 30px,
+  700px: 40px,
+  1024px: 50px,
+);
+
+$p-font-size: (
+  null: 0.77rem,
+  480px: 30px,
+  700px: 40px,
+  1024px: 50px,
+);
+
+/* mixin font sizes */
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
       font-size: $fs-font-size;
     } @else {
+      @if map-has-key($map: $fs-breakpoints, $key: $fs-breakpoint) {
+        $fs-breakpoint: map-get(
+          $map: $fs-breakpoints,
+          $key: $fs-breakpoint,
+        );
+      }
       @media screen and (min-width: $fs-breakpoint) {
         font-size: $fs-font-size;
       }
     }
   }
 }
+
+/* mixin breakpoints */
+
+/* @mixin mq-mobile {
+  @media screen and (max-width: map-get($map: $breakpoints, $key: small)) {
+    @content;
+  }
+}
+
+@mixin mq-tablet {
+  @media screen and (min-width: map-get($map: $breakpoints, $key: small+1px)) and (max-width: map-get($map: $breakpoints, $key: medium)) {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @media screen and (min-width: map-get($map: $breakpoints, $key: medium)) {
+    @content;
+  }
+} */
