@@ -1,5 +1,8 @@
 .page-header {
   text-align: center;
+  @include mq-desktop-xlarge {
+    grid-column: 1 / 2;
+  }
 }
 
 .page {

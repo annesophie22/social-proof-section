@@ -7,19 +7,31 @@ body {
   &__title {
     color: $color-primary-dark;
     font-weight: 700;
-    @include font-size($h1-font-size);
+    font-size: map-get($h1-font-size, 375px);
+    @include mq-tablet {
+      font-size: map-get($h1-font-size, 680px);
+    }
+    @include mq-desktop-xlarge {
+      font-size: map-get($h1-font-size, 1220px);
+      width: 70%;
+      text-align: left;
+    }
   }
   &__headline {
     color: $color-neutral-dark;
     line-height: 1.6;
-    @include font-size($headline-font-size);
+    font-size: 0.88rem;
+    @include mq-desktop-xlarge {
+      width: 80%;
+      text-align: left;
+    }
   }
 }
 
 .rating-block__text {
   color: $color-primary-dark;
   font-weight: 700;
-  @include font-size($p-font-size);
+  font-size: 0.77rem;
 }
 
 .card {
@@ -34,10 +46,11 @@ body {
   &__desc {
     color: $color-white;
     font-weight: 400;
+    letter-spacing: 0.4px;
   }
   &__header-title,
   &__header-subtitle,
   &__desc {
-    @include font-size($p-font-size);
+    font-size: 0.77rem;
   }
 }
